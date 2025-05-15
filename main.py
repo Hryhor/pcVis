@@ -35,6 +35,6 @@ def check_port(port):
 window_width = 800
 window_height = 500
 
-drone_obj = Drone("COM1")
-
-detect_obj(cv2, yolo_model, vebcamera, drone_obj)
+#drone_obj = Drone("COM1")
+#detect_obj(cv2, yolo_model, vebcamera, drone_obj)
+detect_obj(cv2, yolo_model, vebcamera)

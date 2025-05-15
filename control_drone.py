@@ -86,6 +86,6 @@ class Drone:
         self.send_rc()
 
 
-def control_drone(center_x, center_y, target_object_id, confidence, area_percent, drone):
+def control_drone(center_x, center_y, target_object_id, confidence, area_percent):
     print(f"center x: {center_x}, center y: {center_y}, target_object_id: {target_object_id}, confidence: {confidence},"
           f"area_percent:  {area_percent}")

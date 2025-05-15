@@ -2,7 +2,7 @@ from control_drone import control_drone
 
 
 
-def detect_obj(cv2, model, cap, drone):
+def detect_obj(cv2, model, cap):
     window_name = "Object Detection"
 
     # Проверяем, открылась ли камера
@@ -93,7 +93,8 @@ def detect_obj(cv2, model, cap, drone):
                 center_x = (x1 + x2) // 2
                 center_y = (y1 + y2) // 2
                 print(f"Target Object ID: {target_object_id}, Coordinates: (x1={x1}, y1={y1}, x2={x2}, y2={y2})")
-                control_drone(center_x, center_y, target_object_id, confidence, area_percent, drone)
+                #control_drone(center_x, center_y, target_object_id, confidence, area_percent, drone)
+                control_drone(center_x, center_y, target_object_id, confidence, area_percent)
 
                 # Рисуем bounding box
                 cv2.rectangle(frame, (x1, y1), (x2, y2), (0, 255, 0), 2)
